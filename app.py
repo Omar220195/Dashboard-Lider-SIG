@@ -18,7 +18,7 @@ st.set_page_config(
 # Cambia estos dos valores con tu usuario y repositorio de GitHub
 GITHUB_USER = "Omar220195"        # ← reemplaza con tu usuario de GitHub
 GITHUB_REPO = "Dashboard-Lider-SIG"  # ← reemplaza con el nombre de tu repositorio
-GITHUB_FILE = "Datos/lider_sig_datos.xlsx"  # ruta del Excel dentro del repo
+GITHUB_FILE = "lider_sig_datos.xlsx"  # ruta del Excel dentro del repo
 
 # URL raw de GitHub para descargar el archivo directamente
 GITHUB_RAW_URL = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/main/{GITHUB_FILE}"
