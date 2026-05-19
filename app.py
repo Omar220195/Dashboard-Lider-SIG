@@ -129,7 +129,7 @@ with st.sidebar:
     st.markdown("**Fuente de datos**")
     fuente = st.radio(
         "fuente",
-        ["📡 GitHub (automático)", "📂 Subir Excel manualmente"],
+        ["📡 GitHub (automático)"],
         label_visibility="collapsed",
     )
 
