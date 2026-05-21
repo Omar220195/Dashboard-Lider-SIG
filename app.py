@@ -5,7 +5,6 @@ import plotly.graph_objects as go
 from datetime import date, timedelta
 from io import BytesIO
 import requests
-
 # ── Configuración ─────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Control Catastral · Líder SIG",
@@ -277,11 +276,11 @@ if dff.empty:
 st.markdown('<div class="slabel">Resumen general</div>', unsafe_allow_html=True)
 
 total    = len(dff)
-apro     = (dff["Estado"] == "Aprobado Coordinador").sum()
+apro     = (dff["Estado"] == "Registro aprobado Editor SIG").sum()
 term     = (dff["Estado"] == "Terminado Editor SIG").sum()
 proc     = (dff["Estado"] == "En proceso Editor SIG").sum()
 pend     = (dff["Estado"] == "Pendiente Líder SIG").sum()
-rech     = (dff["Estado"] == "Rechazado Coordinador").sum()
+rech     = (dff["Estado"] == "Rechazado a Editor SIG").sum()
 dev      = (dff["Estado"] == "Devuelto a reconocedor").sum()
 capturas = int(dff["#Capturas"].sum())
 predios  = int(dff["#Predios iniciales"].sum())
