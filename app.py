@@ -499,7 +499,7 @@ ed_pivot = ed_pivot.merge(
     dff[dff["Editor"] != "Sin asignar"].groupby("Editor")["Coordinador"].first().reset_index(),
     on="Editor"
 )
-ed_pivot["Aprobados"]  = ed_pivot.get("Aprobado Coordinador", pd.Series(0, index=ed_pivot.index))
+ed_pivot["Aprobados"]  = ed_pivot.get("Registro aprobado Editor SIG", pd.Series(0, index=ed_pivot.index))
 ed_pivot["Terminados"] = ed_pivot.get("Terminado Editor SIG", pd.Series(0, index=ed_pivot.index))
 ed_pivot["En proceso"] = ed_pivot.get("En proceso Editor SIG", pd.Series(0, index=ed_pivot.index))
 ed_pivot["Rechazados"] = ed_pivot.get("Rechazado Coordinador", pd.Series(0, index=ed_pivot.index))
